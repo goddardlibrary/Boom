@@ -1,31 +1,32 @@
 {
-  "name": "boom",
+  "name": "stacks",
   "version": "1.0.0",
-  "description": "Drupal 7 Starter Theme by RepEquity.",
+  "description": "Drupal 7 Starter Theme by NASA Goddard Library.",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com:repequity/boom.git"
+    "url": "git@github.com/goddardlibrary/stacks.git"
   },
-  "author": "RepEquity",
+  "author": "NASA Goddard Library",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "~3.9.0",
-    "gulp-sourcemaps": "~1.5.2",
-    "gulp-autoprefixer": "~3.0.1",
-    "gulp-sass": "~2.2.0",
-    "gulp-jshint": "~1.11.2",
-    "gulp-livereload": "~3.8.0",
-    "browserify": "~10.2.6",
-    "babelify": "~6.3.0",
+    "gulp": "~3.9.1",
+    "gulp-sourcemaps": "~1.6.0",
+    "gulp-autoprefixer": "~3.1.1",
+    "gulp-sass": "~2.3.2",
+    "jshint": "~2.9.3",
+    "gulp-jshint": "~2.0.1",
+    "gulp-livereload": "~3.8.1",
+    "browserify": "~13.1.0",
+    "babelify": "~7.3.0",
     "gulp-notify": "~2.2.0",
     "vinyl-source-stream": "~1.1.0",
-    "gulp-util": "~3.0.6",
-    "yargs": "~3.25.0",
-    "express": "~4.13.1",
+    "gulp-util": "~3.0.7",
+    "yargs": "~5.0.0",
+    "express": "~4.14.0",
     "vinyl-transform": "~1.0.0",
     "stream-browserify": "~2.0.1",
     "gulp-concat": "~2.6.0"

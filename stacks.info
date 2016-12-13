@@ -1,5 +1,5 @@
-name = Boom
-description = Drupal 7 Starter Theme by RepEquity.
+name = stacks
+description = Drupal 7 Starter Theme by NASA Goddard Library.
 screenshot = screenshot.png
 version = 1.0-beta
 engine = phptemplate
@@ -16,7 +16,6 @@ stylesheets[all][] = stylesheets/style.css
 ; ========================================
 scripts[] = js/vendor/modernizr.min.js
 scripts[] = js/vendor/jquery.formalize.js
-scripts[] = js/vendor/jquery.matchHeight-min.js
 scripts[] = js/javascript.js
 
 ; ========================================

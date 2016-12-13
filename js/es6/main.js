@@ -1,7 +1,7 @@
 'use strict';
 
 /* jshint ignore:start */
-(function ($) { Drupal.behaviors.connors2016 = { attach: function (context, settings) {
+(function ($) { Drupal.behaviors.stacks = { attach: function (context, settings) {
 /* jshint ignore:end */
 // Start Drupal Behaviors
 

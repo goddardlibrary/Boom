@@ -1,12 +1,12 @@
 <?php
 
-function boom_css_alter(&$css) {
+function stacks_css_alter(&$css) {
   //dsm($css);
   unset($css[drupal_get_path('module','system').'/system.menus.css']);
   unset($css[drupal_get_path('module','system').'/system.theme.css']);
 }
 
-function boom_preprocess_html(&$vars) {
+function stacks_preprocess_html(&$vars) {
   //dsm($vars);
 
   //to add a Google Fonts stylesheet - replace the URL
@@ -29,7 +29,7 @@ function boom_preprocess_html(&$vars) {
 
 }
 
-function boom_preprocess_page(&$vars) {
+function stacks_preprocess_page(&$vars) {
   // Adds page template suggestion based on node type.
   if (isset($vars['node'])) {
     $vars['theme_hook_suggestions'][] = 'page__'. $vars['node']->type;
@@ -37,12 +37,12 @@ function boom_preprocess_page(&$vars) {
 
 }
 
-function boom_preprocess_image(&$variables) {
+function stacks_preprocess_image(&$variables) {
   // Do not allow drupal to set width and height on images
   unset($variables['width'], $variables['height'], $variables['attributes']['width'], $variables['attributes']['height']);
 }
 
-function boom_menu_link(array $variables) {
+function stacks_menu_link(array $variables) {
   $element = $variables ['element'];
   $sub_menu = '';
   $title = '<span>' . $element['#title'] . '</span>';
@@ -61,19 +61,19 @@ function boom_menu_link(array $variables) {
   return '<li' . drupal_attributes($element ['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
 
-// function boom_preprocess_node(&$vars) {
+// function stacks_preprocess_node(&$vars) {
 //   //dsm($vars);
 // }
 
-// function boom_preprocess_region(&$vars) {
+// function stacks_preprocess_region(&$vars) {
 //   //dsm($vars);
 // }
 
-// function boom_preprocess_block(&$vars) {
+// function stacks_preprocess_block(&$vars) {
 //   //dsm($vars);
 // }
 
-function boom_preprocess_block(&$vars) {
+function stacks_preprocess_block(&$vars) {
   // Make sure that this is a custom block, and not a block that is provided by
   // a module.
   if ($vars['block']->module == 'block') {

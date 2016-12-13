@@ -44,14 +44,6 @@
   background: linear-gradient(to right,  $color1 0%,$color2 100%);
 }
 
-@mixin transform($var) {
-  transform: $var;
-}
-
-@mixin transition($var: all .3s ease) {
-  transition: $var;
-}
-
 @mixin visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -72,76 +64,6 @@
   padding: 0;
   position: static;
   width: auto;
-}
-
-/**
- *
- * Take any drupal view formatted as Unformatted or HTML List and apply a 3 column grid layout
- *
- * $wrapper-name: The immediate div name above view-content and views-row
- *
- * $number-items: The number of items in the grid
- *
- * Future Plans:
- * Make a variable column version
- *
- */
-@mixin gridify($wrapper-name, $number-items: 30) {
-  #{$wrapper-name} {
-    @extend %clearfix;
-    clear: both;
-    width: 100%;
-  }
-  #{$wrapper-name} .views-row {
-    float: left;
-    margin-bottom: 2em;
-    width: 31%;
-    vertical-align: top;
-
-    .item-list li.views-row {
-      margin-left: 0;
-      margin-bottom: 5px;
-    }
-
-    .item-list ul li {
-      margin: 0;
-      padding: 0;
-    }
-
-    .item-list {
-      margin-right: 0;
-    }
-  }
-
-  #{$wrapper-name} .views-row {
-    margin-right: 2%;
-  }
-
-  #{$wrapper-name} .views-row-even {
-    margin-right: 2%;
-  }
-
-  #{$wrapper-name} .views-row-odd {
-    clear: none;
-  }
-
-  $loop-rows: $number-items;
-  $last-row: 1;
-  @for $i from 1 through $loop-rows {
-    @if $i % 3 == 0 {
-      #{$wrapper-name} .views-row-#{$i} {
-        margin-right: 0;
-      }
-    }
-
-    @if $i == $last-row {
-      $last-row: $last-row + 3;
-      #{$wrapper-name} .views-row-#{$i} {
-        clear: left;
-      }
-    }
-  }
-
 }
 
 /**
