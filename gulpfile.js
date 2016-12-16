@@ -6,7 +6,6 @@ var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 var jshint = require('gulp-jshint');
-var livereload = require('gulp-livereload');
 var browserify = require('browserify');
 var babelify = require('babelify');
 var notify = require('gulp-notify');
@@ -15,13 +14,6 @@ var transform = require('vinyl-transform');
 var gutil = require('gulp-util');
 var yargs = require('yargs');
 var concat = require('gulp-concat');
-
-var runExpress = function() {
-  var express = require('express');
-  var app = express();
-  app.use(express.static('sass'));
-  app.listen(4000);
-};
 
 // Compile Sass, run autoprefixer, and create sourcemaps
 gulp.task('styles', function () {
@@ -73,13 +65,6 @@ gulp.task('watch', function() {
   gulp.watch('js/es6/*.js', ['concat']);
   gulp.watch('js/es6/*.js', ['browserify']);
 
-  // Create LiveReload server
-  livereload.listen();
-
-  // Watch any files in public/, reload on change
-  gulp.watch(['stylesheets', 'js']).on('change', livereload.changed);
-
-  runExpress();
 });
 
 // Default task

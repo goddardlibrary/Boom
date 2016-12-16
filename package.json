@@ -1,7 +1,7 @@
 {
   "name": "stacks",
   "version": "1.0.0",
-  "description": "Drupal 7 Starter Theme by NASA Goddard Library.",
+  "description": "Drupal 7 Starter Theme for the NASA Goddard Library.",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,19 +14,17 @@
   "license": "ISC",
   "devDependencies": {
     "gulp": "~3.9.1",
-    "gulp-sourcemaps": "~1.6.0",
+    "gulp-sourcemaps": "~2.2.0",
     "gulp-autoprefixer": "~3.1.1",
     "gulp-sass": "~2.3.2",
-    "jshint": "~2.9.3",
-    "gulp-jshint": "~2.0.1",
-    "gulp-livereload": "~3.8.1",
-    "browserify": "~13.1.0",
+    "jshint": "~2.9.4",
+    "gulp-jshint": "~2.0.2",
+    "browserify": "~13.1.1",
     "babelify": "~7.3.0",
     "gulp-notify": "~2.2.0",
     "vinyl-source-stream": "~1.1.0",
     "gulp-util": "~3.0.7",
-    "yargs": "~5.0.0",
-    "express": "~4.14.0",
+    "yargs": "~6.3.0",
     "vinyl-transform": "~1.0.0",
     "stream-browserify": "~2.0.1",
     "gulp-concat": "~2.6.0"
